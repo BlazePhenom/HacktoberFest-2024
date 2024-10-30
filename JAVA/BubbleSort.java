@@ -1,13 +1,13 @@
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
-        int n = arr.length;
+        int N = arr.length;
         
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - 1 - i; j++) {
+        for (int i = 0; i < N - 1; i++) { // this is done to perform the sorting operation for the complete input till it gets sorted
+            for (int j = 0; j < N -i -1; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
+                    int temp = arr[j];  // the lines 8 to 10 allow us to swap values after comparing the consecutive values otherwise of which we might lose the values.
                     arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    arr[j + 1] = temp;    
                 }
             }
         }
